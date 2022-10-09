@@ -1,0 +1,96 @@
+.container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#logo img{
+    max-width: 125px;
+    height: auto;
+    padding: 5px 0px;
+}
+
+#main-menu{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0px;
+}
+
+#main-menu li{
+    position: relative;
+}
+
+#main-menu li a{
+    color: #6d6d6d;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none; 
+}
+
+#main-menu ul.sub-menu{
+    position: absolute;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    display: none;
+}
+
+#main-menu li:hover>ul.sub-menu{
+    display: block;
+}
+
+#main-menu ul.sub-menu a{
+    padding: 2px 15px;
+    border-bottom: 1px solid whitesmoke;
+    left: 0;
+}
+
+#main-menu ul.sub-menu li:hover>a{
+    border-bottom: 1px solid #43baff;
+}
+
+#main-menu ul.sub-menu li:last-child a{
+    border: none;
+}
+
+#main-menu ul.sub-menu ul.sub-menu{
+    left: 199px;
+    top: -15px;
+    width: 210px;
+}
+
+#main-menu>li.has-child::after{
+    font-family: "Font Awesome 5 free"; 
+    font-weight: 900; 
+    content: "\f0d7";
+    color: #6d6d6d;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 18px 0px;
+}
+
+#main-menu .sub-menu li:hover>a{
+    color: #43baff;
+}
+
+#main-menu .sub-menu>li.has-child::after{
+    font-family: "Font Awesome 5 free"; 
+    font-weight: 900; 
+    content: "\f0da";
+    color: #6d6d6d;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    padding: 3px 0px;
+}
+
+#main-menu .sub-menu>li.has-child:hover::after{
+    color: #43baff;
+}
